@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in detail</title>
+    <link rel="stylesheet" href="/show.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="nav">
+        <h1>Quora</h1>
+        <a href="http://localhost:8080/posts"><h4 class="sign-in"><i class="fa-solid fa-arrow-left"></i> &nbsp; Home Page</h4></a>
+    </nav>
+
+    <div class="detail-body">
+        <div class="post">
+            <h2 class="user">@<%= post.username %>
+            </h2>
+            <h4 class="post-id">Post Id: <%= post.id %></h4>
+            <p class="content">
+                <%= post.content %>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

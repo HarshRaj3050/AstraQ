@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>Quora</h1>
+        <a href="http://localhost:8080/posts/new"><h4 class="sign-in">Create New Post </h4></a>
+    </nav>
+    <div class="post-body">
+        <div class="filter">
+            <div class="total"><h5>All related (100+) <i class="fa-solid fa-angle-down"></i></h5></div>
+            <div class="sort">
+                <h5>Sort</h5>
+                <h5 class="recommended">Recommended <i class="fa-solid fa-angle-down"></i></h5>
+            </div>
+        </div>
+
+        <% for(post of posts) { %>
+            <div class="posts">
+                <div class="post">
+                    <h3 class="user">@<%= post.username %>
+                    </h3>
+                    <p class="content">
+                        <%= post.content %>
+                    </p>
+                    <div class="show-more">
+                        <a href="http://localhost:8080/posts/<%= post.id %>"><h4>See in details &nbsp;<i class="fa-solid fa-angle-down"></i></h4></a>
+                        <a href="http://localhost:8080/posts/<%= post.id %>/edit"><h4>Edit &nbsp;<i class="fa-solid fa-pen-to-square"></i></h4></a>
+                        <form method="post" action="/posts/<%= post.id %>/delete/?_method=DELETE">
+                            <button><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10vw;
+    background-color: #262626;
+}
+
+.nav h1 {
+    font-size: 30px;
+    color: red;
+}
+
+.sign-in {
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    width: 68vw;
+    margin-top: 20px;
+    align-items: center;
+    color: gainsboro;
+}
+
+.sort {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sort .recommended {
+    border: 1px solid gray;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background-color: #262626;
+    color: white;
+}
+
+.post-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.posts {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    width: 70vw;
+    background-color: #262626;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.show-more {
+    width: inherit;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.show-more h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gainsboro;
+    border: 1px solid gainsboro;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: linear 0.1s;
+    background-color: rgb(35, 35, 35);
+
+    &:hover {
+        background-color: rgb(24, 24, 24);
+    }
+}
+
+.show-more button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gainsboro;
+    border: 1px solid gainsboro;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: linear 0.1s;
+    background-color: rgb(35, 35, 35);
+
+    &:hover {
+        background-color: rgb(24, 24, 24);
+    }
+}
+
+.show-more a {
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 720px) {
+    .post {
+        width: 90vw;
+    }
+
+    .filter {
+        width: 88vw;
+    } 
+}
+
+.content {
+    margin-top: 15px;
+    color: gainsboro;
+    text-align: justify;
+}

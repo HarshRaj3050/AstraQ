@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="/new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="nav">
+        <h1>Quora</h1>
+        <a href="http://localhost:8080/posts"><h4 class="sign-in"><i class="fa-solid fa-arrow-left"></i> &nbsp; Home Page</h4></a>
+    </nav>
+    <div class="create-post">
+        <form method="post" action="/posts">
+            <div class="username">
+                <h3>Username</h3>
+                <input type="text" placeholder="Enter your username" name="username">
+            </div>
+            <div class="description">
+                <h3>Description</h3>
+                <textarea name="content"></textarea>
+            </div>
+            <button class="post-button">Post</button>
+        </form>
+    </div>
+</body>
+</html>
