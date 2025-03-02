@@ -11,8 +11,8 @@
 
 <body>
     <nav class="nav">
-        <h1>Quora</h1>
-        <a href="http://localhost:8080/posts/new"><h4 class="sign-in">Create New Post </h4></a>
+        <h1>AstraQ</h1>
+        <a href="https://astraq.onrender.com/new"><h4 class="sign-in">Create New Post </h4></a>
     </nav>
     <div class="post-body">
         <div class="filter">
@@ -32,8 +32,8 @@
                         <%= post.content %>
                     </p>
                     <div class="show-more">
-                        <a href="http://localhost:8080/posts/<%= post.id %>"><h4>See in details &nbsp;<i class="fa-solid fa-angle-down"></i></h4></a>
-                        <a href="http://localhost:8080/posts/<%= post.id %>/edit"><h4>Edit &nbsp;<i class="fa-solid fa-pen-to-square"></i></h4></a>
+                        <a href="https://astraq.onrender.com/<%= post.id %>"><h4>See in details &nbsp;<i class="fa-solid fa-angle-down"></i></h4></a>
+                        <a href="https://astraq.onrender.com/<%= post.id %>/edit"><h4>Edit &nbsp;<i class="fa-solid fa-pen-to-square"></i></h4></a>
                         <form method="post" action="/posts/<%= post.id %>/delete/?_method=DELETE">
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </form>
