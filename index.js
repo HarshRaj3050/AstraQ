@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     let id = uuidv4();
     let {username, content} = req.body;
-    posts.push({id, username,content });
+    posts.unshift({id, username,content });
     res.redirect("/");
 })
 
