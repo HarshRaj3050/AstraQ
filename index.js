@@ -61,13 +61,13 @@ app.patch("/:id", (req, res) => {
     res.redirect("/");
 })
 
-app.get(":id/edit", (req, res) => {
+app.get("/:id/edit", (req, res) => {
     let {id} = req.params;
     let post = posts.find((e) => e.id === id);
     res.render("edit.ejs", {post});
 })
 
-app.delete(":id/delete", (req, res) => {
+app.delete("/:id/delete", (req, res) => {
     let {id} = req.params;
     posts = posts.filter((e) => e.id !== id);
     res.redirect("/");
